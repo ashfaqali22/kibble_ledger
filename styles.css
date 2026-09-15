@@ -193,6 +193,27 @@ img{max-width:100%;}
 .tier-desc{font-size:13.5px;color:var(--ink-2);margin-top:14px;line-height:1.55;}
 
 .supplier-name{font-size:19px;margin-top:6px;}
+.subhead{font-size:16px;margin-bottom:14px;}
+
+/* retail universe */
+.area-list{display:flex;flex-direction:column;min-width:0;}
+.area-row{display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-top:1px solid var(--line);font-size:13.5px;}
+.area-row:first-child{border-top:none;}
+.area-row .ak{color:var(--ink-2);font-weight:600;}
+.area-row .av{color:var(--ink);font-weight:700;font-family:"IBM Plex Mono",monospace;white-space:nowrap;}
+.area-row .av.na{color:var(--ink-mut);font-weight:600;font-family:"IBM Plex Sans",sans-serif;font-size:12px;}
+
+.reach-list{display:flex;flex-direction:column;gap:12px;}
+.reach-row{display:grid;grid-template-columns:132px 1fr 74px;align-items:center;gap:12px;min-width:0;}
+.reach-row .rk{font-size:13px;font-weight:600;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.reach-row .rv{font-family:"IBM Plex Mono",monospace;font-size:12.5px;text-align:right;color:var(--ink-2);white-space:nowrap;}
+.rbar{height:10px;background:var(--surface-2);border-radius:5px;overflow:hidden;min-width:0;}
+.rfill{height:100%;background:linear-gradient(90deg, var(--warm), var(--warm-strong));border-radius:5px;}
+@media (max-width:640px){
+  .reach-row{grid-template-columns:96px 1fr 64px;gap:8px;}
+  .reach-row .rk{font-size:11.5px;}
+  .reach-row .rv{font-size:11px;}
+}
 .quadhead{font-size:12px;letter-spacing:.06em;color:var(--warm-strong);text-transform:uppercase;margin-bottom:10px;}
 .bridge-panel{display:flex;flex-direction:column;justify-content:center;}
 .bridge-title{font-size:14px;margin-bottom:14px;}
