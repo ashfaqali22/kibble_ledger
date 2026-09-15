@@ -135,22 +135,28 @@ img{max-width:100%;}
 .choice-row .val{text-align:right;color:var(--ink);font-weight:600;flex:1 1 auto;}
 .choice-line{text-align:center;font-family:"Fraunces",serif;font-size:17px;margin-top:26px;}
 
-/* ramp chart */
-.ramp-card{padding:36px 30px 24px;}
-@media (max-width:640px){.ramp-card{padding:26px 18px 20px;}}
-.ramp-chart{display:flex;align-items:flex-end;gap:18px;height:220px;padding:0 4px 0;}
-.ramp-col{flex:1;min-width:0;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;}
-.ramp-cum{font-family:"IBM Plex Mono",monospace;font-weight:700;font-size:15px;margin-bottom:8px;white-space:nowrap;}
-.ramp-bar{width:100%;max-width:96px;border-radius:8px 8px 3px 3px;background:linear-gradient(180deg, var(--warm), var(--warm-strong));}
-.ramp-label{margin-top:12px;text-align:center;}
+/* ramp chart — ascending line, not bars */
+.ramp-card{padding:40px 34px 24px;}
+@media (max-width:640px){.ramp-card{padding:28px 8px 18px;}}
+.ramp-graph{position:relative;height:260px;}
+.ramp-svg{position:absolute;left:0;right:0;top:40px;width:100%;height:220px;}
+.ramp-points{position:absolute;inset:0;}
+.ramp-point{position:absolute;transform:translateX(-50%);text-align:center;}
+.ramp-point-end{transform:translateX(-88%);}
+.rp-num{font-family:"IBM Plex Mono",monospace;font-weight:700;font-size:14px;color:var(--ink-mut);white-space:nowrap;}
+.rp-num.rp-lg{font-size:16px;color:var(--ink);}
+.rp-num.rp-hero{font-family:"Fraunces",serif;font-size:26px;font-weight:600;color:var(--warm-strong);}
+.ramp-labels{margin-top:6px;}
+.ramp-label{text-align:center;}
 .ramp-label .ph{font-size:10.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-mut);}
 .ramp-label .name{font-family:"Fraunces",serif;font-weight:600;font-size:16px;margin-top:2px;}
 .ramp-label .exit{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--accent-strong);font-weight:700;margin-top:4px;}
 .ramp-label .unlock{font-size:11px;color:var(--ink-mut);margin-top:6px;line-height:1.4;max-width:150px;margin-inline:auto;}
 @media (max-width:640px){
-  .ramp-chart{flex-direction:column;align-items:center;gap:26px;height:auto;padding:0;}
-  .ramp-col{width:100%;height:auto;flex:none;}
-  .ramp-bar{max-width:140px;margin-inline:auto;}
+  .rp-num{font-size:11px;}
+  .rp-num.rp-lg{font-size:12.5px;}
+  .rp-num.rp-hero{font-size:19px;}
+  .ramp-point-end{transform:translateX(-94%);}
   .ramp-label .unlock{max-width:none;}
 }
 
