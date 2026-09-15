@@ -113,6 +113,11 @@ img{max-width:100%;}
 .chain .arrow{color:var(--ink-mut);font-size:16px;}
 .chain .node.accent{background:var(--accent-tint);border-color:color-mix(in oklab, var(--accent) 40%, transparent);color:var(--accent-strong);}
 .chain .node.warm{background:var(--warm-tint);border-color:var(--warm);color:var(--warm-strong);}
+@media (max-width:640px){
+  .chain{flex-direction:column;align-items:stretch;gap:8px;}
+  .chain .node{width:100%;}
+  .chain .arrow{align-self:center;transform:rotate(90deg);font-size:14px;}
+}
 
 /* comparison frame (the choice) */
 .choice{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--line);border-radius:16px;overflow:hidden;border:1px solid var(--line);}
@@ -143,9 +148,9 @@ img{max-width:100%;}
 .ramp-label .exit{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--accent-strong);font-weight:700;margin-top:4px;}
 .ramp-label .unlock{font-size:11px;color:var(--ink-mut);margin-top:6px;line-height:1.4;max-width:150px;margin-inline:auto;}
 @media (max-width:640px){
-  .ramp-chart{flex-wrap:wrap;gap:22px 12px;height:auto;}
-  .ramp-col{flex:1 1 calc(50% - 12px);height:160px;}
-  .ramp-cum{font-size:12.5px;}
+  .ramp-chart{flex-direction:column;align-items:center;gap:26px;height:auto;padding:0;}
+  .ramp-col{width:100%;height:auto;flex:none;}
+  .ramp-bar{max-width:140px;margin-inline:auto;}
   .ramp-label .unlock{max-width:none;}
 }
 
@@ -163,6 +168,11 @@ img{max-width:100%;}
 .bridge .bnode{background:var(--surface);border:2px solid var(--line-strong);border-radius:10px;padding:12px 18px;text-align:center;}
 .bridge .bnode.hot{border-color:var(--warm);color:var(--warm-strong);}
 .bridge .barrow{color:var(--ink-mut);font-size:16px;}
+@media (max-width:640px){
+  .bridge{flex-direction:column;align-items:stretch;gap:8px;}
+  .bridge .bnode{width:100%;}
+  .bridge .barrow{align-self:center;transform:rotate(90deg);}
+}
 
 /* decisions */
 .dec-card{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--warm);border-radius:0 12px 12px 0;padding:20px 22px;min-width:0;}
